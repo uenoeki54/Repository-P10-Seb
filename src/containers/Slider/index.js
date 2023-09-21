@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useData } from "../../contexts/DataContext";
-import { getMonth } from "../../helpers/Date";
+import { useEffect, useState } from 'react';
+import { useData } from '../../contexts/DataContext';
+import { getMonth } from '../../helpers/Date';
 
-import "./style.scss";
+import './style.scss';
 
 const Slider = () => {
   const { data } = useData();
@@ -12,7 +12,7 @@ const Slider = () => {
   );
   const nextCard = () => {
     setTimeout(
-      () => setIndex(index < byDateDesc.length ? index + 1 : 0),
+      () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
       5000
     );
   };
@@ -26,7 +26,7 @@ const Slider = () => {
           <div
             key={event.title}
             className={`SlideCard SlideCard--${
-              index === idx ? "display" : "hide"
+              index === idx ? 'display' : 'hide'
             }`}
           >
             <img src={event.cover} alt="forum" />
