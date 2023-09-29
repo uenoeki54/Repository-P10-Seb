@@ -50,6 +50,5 @@ DataProvider.propTypes = {
 };
 
 export const useData = () => useContext(DataContext);
-console.log(`valeur de useData ${useData}`);
 
 export default DataContext;
